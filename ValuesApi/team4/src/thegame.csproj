@@ -1,0 +1,37 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+    <PropertyGroup>
+        <TargetFramework>netcoreapp2.1</TargetFramework>
+        <IsPackable>false</IsPackable>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Microsoft.AspNetCore.All" Version="2.1.5" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <DotNetCliToolReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Tools" Version="2.0.2" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <None Remove="Infrastructure\Levels\level-1.txt" />
+        <EmbeddedResource Include="Infrastructure\Levels\level-1.txt">
+            <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </EmbeddedResource>
+        <None Remove="Infrastructure\Levels\level-2.txt" />
+        <EmbeddedResource Include="Infrastructure\Levels\level-2.txt">
+            <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </EmbeddedResource>
+        <None Remove="Infrastructure\Levels\level-3.txt" />
+        <EmbeddedResource Include="Infrastructure\Levels\level-3.txt">
+            <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </EmbeddedResource>
+    </ItemGroup>
+
+    <ItemGroup>
+      <Compile Update="Services\GamesRepo.cs">
+        <DependentUpon>TestData.cs</DependentUpon>
+      </Compile>
+    </ItemGroup>
+
+</Project>

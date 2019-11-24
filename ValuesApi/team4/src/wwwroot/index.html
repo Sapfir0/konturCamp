@@ -1,0 +1,36 @@
+<html>
+<head>
+    <link rel="stylesheet" href="game.css">
+    <link rel="stylesheet" href="common.css">
+</head>
+<body>
+    <div class="gameContainer sokoban">
+        <div class="scoreContainer"></div>
+        <table id="field" class="field"></table>
+        <div class="leaderboard">
+            <h2>Leaderboard</h2>
+            <table class="leaderboard-table">
+                <tr>
+                    <td>42</td>
+                    <td>TODO</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div class="hidden overlay gameover">Game Over</div>
+    <div class="overlay start">
+        <div>
+            <div class="startMessage">Select level</div>
+            <div class="buttons">
+                <button class="levelMenu" data-level="1">Level 1</button>
+                <button class="levelMenu" data-level="2">Level 2</button>
+                <button class="levelMenu" data-level="3">Level 3</button>
+            </div>
+            <div class="mainButtonContainer">
+                <button class="startButton" type="submit">START</button>
+            </div>
+        </div>
+    </div>
+    <script src="game.js"></script>
+</body>
+</html>
